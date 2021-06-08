@@ -2,7 +2,7 @@
 //! libraries.
 
 use std::os::raw::{c_char, c_int, c_void};
-use std::os::unix::io::RawFd;
+use timeout_io::RawFd;
 
 #[repr(C)]
 pub struct wl_message {
