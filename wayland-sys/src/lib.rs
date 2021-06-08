@@ -57,7 +57,11 @@ pub mod egl;
 pub mod cursor;
 
 #[cfg(feature = "server")]
-pub use libc::{gid_t, pid_t, uid_t};
+//pub use libc::{gid_t, pid_t, uid_t};
+// DIRTY REPLACEMENT
+pub type pid_t = i32;
+pub type uid_t = u32;
+pub type gid_t = u32;
 
 // Small hack while #[macro_reexport] is not stable
 
