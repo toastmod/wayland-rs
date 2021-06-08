@@ -6,7 +6,12 @@
 
 use super::common::*;
 #[cfg(feature = "server")]
-use libc::{gid_t, pid_t, uid_t};
+//use libc::{gid_t, pid_t, uid_t};
+// DIRTY REPLACEMENT
+pub type pid_t = i32;
+pub type uid_t = u32;
+pub type gid_t = u32;
+
 #[cfg(feature = "server")]
 use std::os::raw::c_char;
 use std::os::raw::{c_int, c_void};
