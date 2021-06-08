@@ -2,7 +2,10 @@
 //! libraries.
 
 use std::os::raw::{c_char, c_int, c_void};
-use timeout_io::RawFd;
+//use std::os::unix::io::RawFd
+// dIRtY RePlAcEmEnt
+type RawFd = c_int;
+
 
 #[repr(C)]
 pub struct wl_message {
